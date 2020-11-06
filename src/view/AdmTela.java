@@ -5,6 +5,10 @@
  */
 package view;
 
+import java.io.File;
+import java.io.IOException;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author bruno.schneider
@@ -34,8 +38,10 @@ public class AdmTela extends javax.swing.JFrame {
         botaoMozilla = new javax.swing.JToggleButton();
         botaoVnc = new javax.swing.JToggleButton();
         botaoKaspersky = new javax.swing.JToggleButton();
+        botaoALL = new javax.swing.JToggleButton();
         botaoWinrar = new javax.swing.JToggleButton();
-        botaoWatch8 = new javax.swing.JToggleButton();
+        botaoWatch = new javax.swing.JToggleButton();
+        jLabel1 = new javax.swing.JLabel();
         iconAdobeAir = new javax.swing.JLabel();
         iconAdobeR = new javax.swing.JLabel();
         iconJava = new javax.swing.JLabel();
@@ -107,6 +113,15 @@ public class AdmTela extends javax.swing.JFrame {
         });
         getContentPane().add(botaoKaspersky, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 210, 80, -1));
 
+        botaoALL.setForeground(new java.awt.Color(255, 51, 51));
+        botaoALL.setText("abrir todos!");
+        botaoALL.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoALLActionPerformed(evt);
+            }
+        });
+        getContentPane().add(botaoALL, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 350, 100, -1));
+
         botaoWinrar.setText("instalar");
         botaoWinrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -115,13 +130,16 @@ public class AdmTela extends javax.swing.JFrame {
         });
         getContentPane().add(botaoWinrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 280, 80, -1));
 
-        botaoWatch8.setText("instalar");
-        botaoWatch8.addActionListener(new java.awt.event.ActionListener() {
+        botaoWatch.setText("instalar");
+        botaoWatch.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botaoWatch8ActionPerformed(evt);
+                botaoWatchActionPerformed(evt);
             }
         });
-        getContentPane().add(botaoWatch8, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 90, 80, -1));
+        getContentPane().add(botaoWatch, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 90, 80, -1));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/normal/setaLogo1.png"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 50, -1, -1));
 
         iconAdobeAir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/normal/NadobeAir.png"))); // NOI18N
         getContentPane().add(iconAdobeAir, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 150, -1, -1));
@@ -159,41 +177,106 @@ public class AdmTela extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void botaoAdobeAirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoAdobeAirActionPerformed
+        try {
+            java.awt.Desktop.getDesktop().open(new File("Y:\\Software\\Instalacao Padrao\\Instalação Administração\\"
+                    + "02 - Adobe\\Adobe - Adobe AIR.url"));
+        } catch (IOException ex) {
+            JOptionPane.showMessageDialog(this,"Erro ao abrir o Adobe AIR!!");
+        }
         iconAdobeAir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/corretos/adobeAir.png")));
     }//GEN-LAST:event_botaoAdobeAirActionPerformed
 
     private void botaoAdobeRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoAdobeRActionPerformed
+        try {
+            java.awt.Desktop.getDesktop().open(new File("Y:\\Software\\Instalacao Padrao\\Instalação Administração\\02 - Adobe\\"
+                    + "Download do Adobe Acrobat Reader DC  Visualizador gratuito de PDF para Windows, Mac OS e Android.url"));
+        } catch (IOException ex) {
+            JOptionPane.showMessageDialog(this,"Erro ao abrir o Adobe Acrobat Reader!!");
+        }
         iconAdobeR.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/corretos/adobeAcrobatLogo.png")));
     }//GEN-LAST:event_botaoAdobeRActionPerformed
 
     private void botaoJavaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoJavaActionPerformed
+        try {
+            java.awt.Desktop.getDesktop().open(new File("Y:\\Software\\Instalacao Padrao\\"
+                    + "Instalação Administração\\05 - Java\\Downloads do Java para Todos os Sistemas Operacionais.url"));
+        } catch (IOException ex) {
+            JOptionPane.showMessageDialog(this,"Erro ao abrir o Java!!");
+        }
         iconJava.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/corretos/javaLog.png")));
     }//GEN-LAST:event_botaoJavaActionPerformed
 
     private void botaoChromeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoChromeActionPerformed
+        try {
+            java.awt.Desktop.getDesktop().open(new File("Y:\\Software\\Instalacao Padrao\\"
+                    + "Instalação Administração\\08 - Chrome\\Chrome.url"));
+                    } catch (IOException ex) {
+            JOptionPane.showMessageDialog(this,"Erro ao abrir o Chrome!!");
+        }
         iconChrome.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/corretos/chromeLogo.png")));
     }//GEN-LAST:event_botaoChromeActionPerformed
 
     private void botaoMozillaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoMozillaActionPerformed
+        try {
+            java.awt.Desktop.getDesktop().open(new File("Y:\\Software\\Instalacao Padrao\\Instalação Administração\\"
+                    + "09 - Mozilla\\Baixe o Firefox — Navegador web livre — Mozilla.url"));
+        } catch (IOException ex) {
+            JOptionPane.showMessageDialog(this,"Erro ao abrir o Mozilla!!");
+        }
         iconMozilla.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/corretos/mozilaLog.png")));
     }//GEN-LAST:event_botaoMozillaActionPerformed
 
     private void botaoVncActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoVncActionPerformed
+        try {
+            java.awt.Desktop.getDesktop().open(new File("Y:\\Software\\Instalacao Padrao\\"
+                    + "Instalação Administração\\12 - Acesso Remoto\\UltraVNC_X64.exe"));
+        } catch (IOException ex) {
+            JOptionPane.showMessageDialog(this,"Erro ao abrir o VNC!!");
+        }
         iconVnc.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/corretos/ultraVncLog.png")));
     }//GEN-LAST:event_botaoVncActionPerformed
 
     private void botaoKasperskyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoKasperskyActionPerformed
-        
+        try {
+            java.awt.Desktop.getDesktop().open(new File("Y:\\Software\\Instalacao Padrao\\20 - Anti-Virus\\Instaladores\\"
+                    + "Antivírus 7 - 8 e 10\\Kaspersky Antivírus  - com Agente - Install.url"));
+        } catch (IOException ex) {
+            JOptionPane.showMessageDialog(this,"Erro ao abrir o Kaspersky!!");
+        }
         iconKaspersky.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/corretos/kasperskyLogo.png")));
     }//GEN-LAST:event_botaoKasperskyActionPerformed
 
+    private void botaoWatchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoWatchActionPerformed
+        try {
+            java.awt.Desktop.getDesktop().open(new File("Y:\\Software\\Instalacao Padrao"
+                    + "\\Instalação Administração\\01 - WatchGuard\\WG-Authentication-Client_12_5_4.msi"));
+        } catch (IOException ex) {
+            JOptionPane.showMessageDialog(this,"Erro ao abrir o watchguard!!");
+        }
+        iconWatchguard.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/corretos/watchguardLogo.png")));
+    }//GEN-LAST:event_botaoWatchActionPerformed
+
+    private void botaoALLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoALLActionPerformed
+        botaoWatchActionPerformed(evt);
+        botaoAdobeAirActionPerformed(evt);
+        botaoAdobeRActionPerformed(evt);
+        botaoJavaActionPerformed(evt);
+        botaoWinrarActionPerformed(evt);
+        botaoChromeActionPerformed(evt);
+        botaoMozillaActionPerformed(evt);
+        botaoVncActionPerformed(evt);
+        botaoKasperskyActionPerformed(evt);
+    }//GEN-LAST:event_botaoALLActionPerformed
+
     private void botaoWinrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoWinrarActionPerformed
+        try {
+            java.awt.Desktop.getDesktop().open(new File("Y:\\Software\\Instalacao Padrao\\Instalação Administração\\06 - Compactador\\"
+                + "Winrar 64 Bits 4.2\\winrar.exe"));
+        } catch (IOException ex) {
+            JOptionPane.showMessageDialog(this,"Erro ao abrir o winrar!!");
+        }
         iconWinrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/corretos/winrarLogo.png")));
     }//GEN-LAST:event_botaoWinrarActionPerformed
-
-    private void botaoWatch8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoWatch8ActionPerformed
-        iconWatchguard.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/corretos/watchguardLogo.png")));
-    }//GEN-LAST:event_botaoWatch8ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -232,6 +315,7 @@ public class AdmTela extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JToggleButton botaoALL;
     private javax.swing.JToggleButton botaoAdobeAir;
     private javax.swing.JToggleButton botaoAdobeR;
     private javax.swing.JToggleButton botaoChrome;
@@ -239,7 +323,7 @@ public class AdmTela extends javax.swing.JFrame {
     private javax.swing.JToggleButton botaoKaspersky;
     private javax.swing.JToggleButton botaoMozilla;
     private javax.swing.JToggleButton botaoVnc;
-    private javax.swing.JToggleButton botaoWatch8;
+    private javax.swing.JToggleButton botaoWatch;
     private javax.swing.JToggleButton botaoWinrar;
     private javax.swing.JLabel iconAdobeAir;
     private javax.swing.JLabel iconAdobeR;
@@ -251,5 +335,6 @@ public class AdmTela extends javax.swing.JFrame {
     private javax.swing.JLabel iconVnc;
     private javax.swing.JLabel iconWatchguard;
     private javax.swing.JLabel iconWinrar;
+    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
