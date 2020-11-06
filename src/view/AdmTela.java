@@ -5,11 +5,6 @@
  */
 package view;
 
-import java.io.File;
-import java.io.IOException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
 /**
  *
  * @author bruno.schneider
@@ -32,33 +27,128 @@ public class AdmTela extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
-        iconCaixa = new javax.swing.JLabel();
+        botaoAdobeAir = new javax.swing.JToggleButton();
+        botaoAdobeR = new javax.swing.JToggleButton();
+        botaoJava = new javax.swing.JToggleButton();
+        botaoChrome = new javax.swing.JToggleButton();
+        botaoMozilla = new javax.swing.JToggleButton();
+        botaoVnc = new javax.swing.JToggleButton();
+        botaoKaspersky = new javax.swing.JToggleButton();
+        botaoWinrar = new javax.swing.JToggleButton();
+        botaoWatch8 = new javax.swing.JToggleButton();
+        iconAdobeAir = new javax.swing.JLabel();
+        iconAdobeR = new javax.swing.JLabel();
+        iconJava = new javax.swing.JLabel();
+        iconWinrar = new javax.swing.JLabel();
+        iconChrome = new javax.swing.JLabel();
+        iconKaspersky = new javax.swing.JLabel();
+        iconMozilla = new javax.swing.JLabel();
         iconWatchguard = new javax.swing.JLabel();
+        iconVnc = new javax.swing.JLabel();
         iconFundo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton1.setText("Instalar");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        botaoAdobeAir.setText("instalar");
+        botaoAdobeAir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                botaoAdobeAirActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 60, -1, -1));
+        getContentPane().add(botaoAdobeAir, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 150, 80, -1));
 
-        iconCaixa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/caixa.png"))); // NOI18N
-        iconCaixa.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                iconCaixaMouseClicked(evt);
+        botaoAdobeR.setText("instalar");
+        botaoAdobeR.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoAdobeRActionPerformed(evt);
             }
         });
-        getContentPane().add(iconCaixa, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 70, -1, -1));
+        getContentPane().add(botaoAdobeR, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 220, 80, -1));
 
-        iconWatchguard.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/watchguardLogo.png"))); // NOI18N
-        getContentPane().add(iconWatchguard, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 50, -1, -1));
+        botaoJava.setText("instalar");
+        botaoJava.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoJavaActionPerformed(evt);
+            }
+        });
+        getContentPane().add(botaoJava, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 280, 80, -1));
+
+        botaoChrome.setText("instalar");
+        botaoChrome.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoChromeActionPerformed(evt);
+            }
+        });
+        getContentPane().add(botaoChrome, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 350, 80, -1));
+
+        botaoMozilla.setText("instalar");
+        botaoMozilla.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoMozillaActionPerformed(evt);
+            }
+        });
+        getContentPane().add(botaoMozilla, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 90, 80, -1));
+
+        botaoVnc.setText("instalar");
+        botaoVnc.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoVncActionPerformed(evt);
+            }
+        });
+        getContentPane().add(botaoVnc, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 150, 80, -1));
+
+        botaoKaspersky.setText("instalar");
+        botaoKaspersky.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoKasperskyActionPerformed(evt);
+            }
+        });
+        getContentPane().add(botaoKaspersky, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 210, 80, -1));
+
+        botaoWinrar.setText("instalar");
+        botaoWinrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoWinrarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(botaoWinrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 280, 80, -1));
+
+        botaoWatch8.setText("instalar");
+        botaoWatch8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoWatch8ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(botaoWatch8, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 90, 80, -1));
+
+        iconAdobeAir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/normal/NadobeAir.png"))); // NOI18N
+        getContentPane().add(iconAdobeAir, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 150, -1, -1));
+
+        iconAdobeR.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/normal/NadobeAcrobatLogo.png"))); // NOI18N
+        getContentPane().add(iconAdobeR, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 210, -1, -1));
+
+        iconJava.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/normal/NjavaLog.png"))); // NOI18N
+        getContentPane().add(iconJava, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 270, -1, -1));
+
+        iconWinrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/normal/NwinrarLogo.png"))); // NOI18N
+        getContentPane().add(iconWinrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 270, -1, -1));
+
+        iconChrome.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/normal/NchormeLogo.png"))); // NOI18N
+        getContentPane().add(iconChrome, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 340, -1, -1));
+
+        iconKaspersky.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/normal/NkasperkyLogo.png"))); // NOI18N
+        getContentPane().add(iconKaspersky, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 200, -1, -1));
+
+        iconMozilla.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/normal/NmozilaLog.png"))); // NOI18N
+        getContentPane().add(iconMozilla, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 80, -1, -1));
+
+        iconWatchguard.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/normal/watchguardLogo.png"))); // NOI18N
+        getContentPane().add(iconWatchguard, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 80, -1, -1));
+
+        iconVnc.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/normal/NultraVncLog.png"))); // NOI18N
+        getContentPane().add(iconVnc, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 140, -1, -1));
 
         iconFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/Pfundo3.png"))); // NOI18N
         iconFundo.setPreferredSize(new java.awt.Dimension(500, 500));
@@ -68,24 +158,42 @@ public class AdmTela extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        try {
-            java.awt.Desktop.getDesktop().open(new File("Y:\\Software\\Instalacao Padrao"
-                    + "\\Instalação Administração\\01 - WatchGuard\\WG-Authentication-Client_12_5_4.msi"));
-        } catch (IOException ex) {
-            Logger.getLogger(AdmTela.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        iconCaixa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/caixaMarcada.png")));
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void botaoAdobeAirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoAdobeAirActionPerformed
+        iconAdobeAir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/corretos/adobeAir.png")));
+    }//GEN-LAST:event_botaoAdobeAirActionPerformed
 
-    private void iconCaixaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_iconCaixaMouseClicked
-        if(iconCaixa.getIcon().equals(getClass().getResource("/imgs/caixaMarcada.png"))){
-            iconCaixa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/caixa.png")));
-            
-        }else if(iconCaixa.getIcon().equals(getClass().getResource("/imgs/caixa.png"))){
-            iconCaixa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/caixaMarcada.png")));
-        }
-    }//GEN-LAST:event_iconCaixaMouseClicked
+    private void botaoAdobeRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoAdobeRActionPerformed
+        iconAdobeR.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/corretos/adobeAcrobatLogo.png")));
+    }//GEN-LAST:event_botaoAdobeRActionPerformed
+
+    private void botaoJavaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoJavaActionPerformed
+        iconJava.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/corretos/javaLog.png")));
+    }//GEN-LAST:event_botaoJavaActionPerformed
+
+    private void botaoChromeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoChromeActionPerformed
+        iconChrome.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/corretos/chromeLogo.png")));
+    }//GEN-LAST:event_botaoChromeActionPerformed
+
+    private void botaoMozillaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoMozillaActionPerformed
+        iconMozilla.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/corretos/mozilaLog.png")));
+    }//GEN-LAST:event_botaoMozillaActionPerformed
+
+    private void botaoVncActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoVncActionPerformed
+        iconVnc.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/corretos/ultraVncLog.png")));
+    }//GEN-LAST:event_botaoVncActionPerformed
+
+    private void botaoKasperskyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoKasperskyActionPerformed
+        
+        iconKaspersky.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/corretos/kasperskyLogo.png")));
+    }//GEN-LAST:event_botaoKasperskyActionPerformed
+
+    private void botaoWinrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoWinrarActionPerformed
+        iconWinrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/corretos/winrarLogo.png")));
+    }//GEN-LAST:event_botaoWinrarActionPerformed
+
+    private void botaoWatch8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoWatch8ActionPerformed
+        iconWatchguard.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/corretos/watchguardLogo.png")));
+    }//GEN-LAST:event_botaoWatch8ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -124,9 +232,24 @@ public class AdmTela extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel iconCaixa;
+    private javax.swing.JToggleButton botaoAdobeAir;
+    private javax.swing.JToggleButton botaoAdobeR;
+    private javax.swing.JToggleButton botaoChrome;
+    private javax.swing.JToggleButton botaoJava;
+    private javax.swing.JToggleButton botaoKaspersky;
+    private javax.swing.JToggleButton botaoMozilla;
+    private javax.swing.JToggleButton botaoVnc;
+    private javax.swing.JToggleButton botaoWatch8;
+    private javax.swing.JToggleButton botaoWinrar;
+    private javax.swing.JLabel iconAdobeAir;
+    private javax.swing.JLabel iconAdobeR;
+    private javax.swing.JLabel iconChrome;
     private javax.swing.JLabel iconFundo;
+    private javax.swing.JLabel iconJava;
+    private javax.swing.JLabel iconKaspersky;
+    private javax.swing.JLabel iconMozilla;
+    private javax.swing.JLabel iconVnc;
     private javax.swing.JLabel iconWatchguard;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel iconWinrar;
     // End of variables declaration//GEN-END:variables
 }
