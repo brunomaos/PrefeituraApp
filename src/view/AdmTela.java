@@ -5,6 +5,7 @@
  */
 package view;
 
+import Control.Edicao;
 import java.io.File;
 import java.io.IOException;
 import javax.swing.JOptionPane;
@@ -21,7 +22,8 @@ public class AdmTela extends javax.swing.JFrame {
     public AdmTela() {
         initComponents();
     }
-
+    Edicao edit = new Edicao();
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -41,7 +43,7 @@ public class AdmTela extends javax.swing.JFrame {
         botaoALL = new javax.swing.JToggleButton();
         botaoWinrar = new javax.swing.JToggleButton();
         botaoWatch = new javax.swing.JToggleButton();
-        jLabel1 = new javax.swing.JLabel();
+        btVoltar = new javax.swing.JLabel();
         iconAdobeAir = new javax.swing.JLabel();
         iconAdobeR = new javax.swing.JLabel();
         iconJava = new javax.swing.JLabel();
@@ -138,8 +140,14 @@ public class AdmTela extends javax.swing.JFrame {
         });
         getContentPane().add(botaoWatch, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 90, 80, -1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/normal/setaLogo1.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 50, -1, -1));
+        btVoltar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/normal/setaLogo1.png"))); // NOI18N
+        btVoltar.setText("      ");
+        btVoltar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btVoltarMouseClicked(evt);
+            }
+        });
+        getContentPane().add(btVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 50, -1, -1));
 
         iconAdobeAir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/normal/NadobeAir.png"))); // NOI18N
         getContentPane().add(iconAdobeAir, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 150, -1, -1));
@@ -247,9 +255,11 @@ public class AdmTela extends javax.swing.JFrame {
     }//GEN-LAST:event_botaoKasperskyActionPerformed
 
     private void botaoWatchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoWatchActionPerformed
+         String aux = edit.getArquivo("url-Watchguard.txt");
+         File f = new File(aux);
         try {
-            java.awt.Desktop.getDesktop().open(new File("Y:\\Software\\Instalacao Padrao"
-                    + "\\Instalação Administração\\01 - WatchGuard\\WG-Authentication-Client_12_5_4.msi"));
+            java.awt.Desktop.getDesktop().open(f);
+        
         } catch (IOException ex) {
             JOptionPane.showMessageDialog(this,"Erro ao abrir o watchguard!!");
         }
@@ -278,6 +288,17 @@ public class AdmTela extends javax.swing.JFrame {
         iconWinrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/corretos/winrarLogo.png")));
     }//GEN-LAST:event_botaoWinrarActionPerformed
 
+    private void btVoltarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btVoltarMouseClicked
+        TelaInicial tI = new TelaInicial();
+        tI.setVisible(true);
+        if(tI.isVisible()){
+            this.dispose();
+        }
+    }//GEN-LAST:event_btVoltarMouseClicked
+    
+    public void mudarUrlPadrao(String x){
+       
+    }
     /**
      * @param args the command line arguments
      */
@@ -325,6 +346,7 @@ public class AdmTela extends javax.swing.JFrame {
     private javax.swing.JToggleButton botaoVnc;
     private javax.swing.JToggleButton botaoWatch;
     private javax.swing.JToggleButton botaoWinrar;
+    private javax.swing.JLabel btVoltar;
     private javax.swing.JLabel iconAdobeAir;
     private javax.swing.JLabel iconAdobeR;
     private javax.swing.JLabel iconChrome;
@@ -335,6 +357,5 @@ public class AdmTela extends javax.swing.JFrame {
     private javax.swing.JLabel iconVnc;
     private javax.swing.JLabel iconWatchguard;
     private javax.swing.JLabel iconWinrar;
-    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
