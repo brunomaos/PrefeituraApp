@@ -45,6 +45,11 @@ public class TelaEdit extends javax.swing.JFrame {
         getContentPane().add(btAlterar, new org.netbeans.lib.awtextra.AbsoluteConstraints(271, 230, 110, -1));
 
         btVoltar.setText("voltar!");
+        btVoltar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btVoltarActionPerformed(evt);
+            }
+        });
         getContentPane().add(btVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 230, -1, -1));
 
         campoUrl.setText("Insira a nova url para o watchguard!");
@@ -57,6 +62,12 @@ public class TelaEdit extends javax.swing.JFrame {
         Edicao edit = new Edicao();
         edit.escrever("url-Watchguard.txt", campoUrl.getText());
     }//GEN-LAST:event_btAlterarActionPerformed
+
+    private void btVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btVoltarActionPerformed
+        AdmTela at = new AdmTela();
+        at.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btVoltarActionPerformed
 
     /**
      * @param args the command line arguments

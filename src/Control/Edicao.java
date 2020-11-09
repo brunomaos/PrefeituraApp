@@ -1,6 +1,7 @@
 
 package Control;
 
+import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -20,11 +21,11 @@ public class Edicao {
     public String escrever(String caminho, String mensagem){
         try {
             FileWriter fw = new FileWriter(caminho);
-            PrintWriter pw  = new PrintWriter(fw);
-            pw.println(mensagem);
+            BufferedWriter bw = new BufferedWriter(fw);
             
-            pw.flush();
-            pw.close();
+            bw.write(mensagem);
+            
+            bw.close();
             fw.close();
         } catch (IOException ex) {
             Logger.getLogger(Edicao.class.getName()).log(Level.SEVERE, null, ex);

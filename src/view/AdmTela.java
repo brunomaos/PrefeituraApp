@@ -43,6 +43,7 @@ public class AdmTela extends javax.swing.JFrame {
         botaoALL = new javax.swing.JToggleButton();
         botaoWinrar = new javax.swing.JToggleButton();
         botaoWatch = new javax.swing.JToggleButton();
+        jButton1 = new javax.swing.JButton();
         btVoltar = new javax.swing.JLabel();
         iconAdobeAir = new javax.swing.JLabel();
         iconAdobeR = new javax.swing.JLabel();
@@ -139,6 +140,14 @@ public class AdmTela extends javax.swing.JFrame {
             }
         });
         getContentPane().add(botaoWatch, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 90, 80, -1));
+
+        jButton1.setText("jButton1");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 10, -1, -1));
 
         btVoltar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/normal/setaLogo1.png"))); // NOI18N
         btVoltar.setText("      ");
@@ -295,6 +304,12 @@ public class AdmTela extends javax.swing.JFrame {
             this.dispose();
         }
     }//GEN-LAST:event_btVoltarMouseClicked
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        TelaEdit  te = new TelaEdit();
+        te.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
     
     public void mudarUrlPadrao(String x){
        
@@ -357,5 +372,6 @@ public class AdmTela extends javax.swing.JFrame {
     private javax.swing.JLabel iconVnc;
     private javax.swing.JLabel iconWatchguard;
     private javax.swing.JLabel iconWinrar;
+    private javax.swing.JButton jButton1;
     // End of variables declaration//GEN-END:variables
 }
