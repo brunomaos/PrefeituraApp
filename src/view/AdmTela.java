@@ -313,7 +313,7 @@ public class AdmTela extends javax.swing.JFrame {
     }//GEN-LAST:event_btEditUrlActionPerformed
 
     private void btOutrosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btOutrosActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_btOutrosActionPerformed
     
     public void mudarUrlPadrao(String x){

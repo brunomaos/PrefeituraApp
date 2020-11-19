@@ -4,6 +4,7 @@ package view;
 import Control.Edicao;
 import java.awt.Color;
 import java.io.IOException;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -176,22 +177,31 @@ public class TelaEdit extends javax.swing.JFrame {
         int aux = Integer.parseInt(campoNumero.getText());
         if(aux == 1){
             edit.escrever("url-Watchguard.txt", campoUrl.getText());
+            JOptionPane.showMessageDialog(this,"Url watchguard alterado!!");
         }else if(aux == 2){
             edit.escrever("url-AdobeAir.txt", campoUrl.getText());
+            JOptionPane.showMessageDialog(this,"Url Adobe Air alterado!!");
         }else if(aux == 3){
             edit.escrever("url-AdobeAcrobat.txt", campoUrl.getText());
+            JOptionPane.showMessageDialog(this,"Url Adobe Acrobat alterado!!");
         }else if(aux == 4){
             edit.escrever("url-Java.txt", campoUrl.getText());
+            JOptionPane.showMessageDialog(this,"Url Java alterado!!");
         }else if(aux == 5 ){
             edit.escrever("url-Chrome.txt", campoUrl.getText());
+            JOptionPane.showMessageDialog(this,"Url Chrome alterado!!");
         }else if(aux == 6){
             edit.escrever("url-Mozilla.txt", campoUrl.getText());
+            JOptionPane.showMessageDialog(this,"Url Mozilla alterado!!");
         }else if(aux == 7){
             edit.escrever("url-Vnc.txt", campoUrl.getText());
+            JOptionPane.showMessageDialog(this,"Url Ultra VNC alterado!!");
         }else if(aux == 8){
             edit.escrever("url-Kaspersky.txt", campoUrl.getText());
+            JOptionPane.showMessageDialog(this,"Url Kaspersky alterado!!");
         }else if(aux == 9){
             edit.escrever("url-Winrar.txt", campoUrl.getText());
+            JOptionPane.showMessageDialog(this,"Url Winrar alterado!!");
         }
         
     }//GEN-LAST:event_btAlterarActionPerformed
